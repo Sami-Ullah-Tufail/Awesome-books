@@ -5,7 +5,7 @@ const bookList = document.getElementById("bookList");
 
 const storedBooks = localStorage.getItem("books");
 const books = storedBooks ? JSON.parse(storedBooks) : [];
-/*
+
 function addBook() {
     const title = bookTitleInput.value;
     const author = bookAuthorInput.value;
@@ -19,7 +19,7 @@ function addBook() {
         bookAuthorInput.value = "";
     }
 }
-*/
+
 function deleteBook(index) {
     books.splice(index, 1);
     saveBooksToLocalStorage();
