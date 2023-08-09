@@ -28,7 +28,7 @@ h2.book-list-header {
   margin-bottom: 20px;
 }
 
-/*
+
 form {
   display: flex;
   flex-direction: column;
@@ -38,7 +38,6 @@ form {
 label {
   margin-top: 10px;
 }
-*/
 input[type="text"] {
   width: 100%;
   padding: 5px;
