@@ -1,7 +1,64 @@
-div {
+/* Center align the entire page */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* Style for the main header */
+h1.main-header {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Style for the book list header */
+h2.book-list-header {
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
+/* Style for the book list container */
+#bookListContainer {
+  width: 80%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Style for the form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+button {
+  margin-left: 78%;
+  margin-top: 10px;
+  padding: 5px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style for the book list */
 ul {
   list-style: none;
   padding: 0;
@@ -10,6 +67,29 @@ ul {
 
 li {
   border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li:nth-child(even) {
+  background-color: #f4f4f4; /* Gray for even */
+}
+
+li:nth-child(odd) {
+  background-color: white; /* White for odd */
+}
+
+button.remove-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+button.remove-button:hover {
+  background-color: #c82333;
 }
