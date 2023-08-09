@@ -1,18 +1,26 @@
-/* eslint-disable */
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-}
 class BookList {
   constructor() {
-    this.books = JSON.parse(localStorage.getItem("books")) || [];
+    this.books = JSON.parse(localStorage.getItem('books')) || [];
+    this.bookListElement = document.getElementById('bookList');
+    this.bookTitleInput = document.getElementById('bookTitle');
+    this.bookAuthorInput = document.getElementById('bookAuthor');
+    this.addButton = document.getElementById('addButton');
+
+    this.addButton.addEventListener('click', () => {
+      this.addBook();
+      this.renderBooks();
+      this.bookTitleInput.value = '';
+      this.bookAuthorInput.value = '';
+    });
+
+    this.renderBooks();
   }
- 
-  addBook(title, author) {
-    if (title.trim() !== "" && author.trim() !== "") {
-      const book = new Book(title, author);
+
+  addBook() {
+    const title = this.bookTitleInput.value.trim();
+    const author = this.bookAuthorInput.value.trim();
+    if (title !== '' && author !== '') {
+      const book = { title, author };
       this.books.push(book);
       this.saveBooks();
     }
@@ -24,39 +32,30 @@ class BookList {
   }
 
   saveBooks() {
-    localStorage.setItem("books", JSON.stringify(this.books));
+    localStorage.setItem('books', JSON.stringify(this.books));
   }
 
-  renderBooks(bookListElement) {
-    bookListElement.innerHTML = "";
+  renderBooks() {
+    this.bookListElement.innerHTML = '';
     this.books.forEach((book, index) => {
-      const li = document.createElement("li");
-      li.textContent = `"${book.title}" by ${book.author}`;
+      const li = document.createElement('li');
+      li.textContent = `${book.title} by ${book.author}`;
 
-      const removeButton = document.createElement("button");
-      removeButton.textContent = "Remove";
-      removeButton.addEventListener("click", () => {
+      const removeButton = document.createElement('button');
+      removeButton.textContent = 'Remove';
+      removeButton.classList.add('remove-button');
+      removeButton.addEventListener('click', () => {
         this.removeBook(index);
-        this.renderBooks(bookListElement);
+        this.renderBooks();
       });
 
       li.appendChild(removeButton);
-      bookListElement.appendChild(li);
+      this.bookListElement.appendChild(li);
     });
   }
 }
-
-const bookTitleInput = document.getElementById("bookTitle");
-const bookAuthorInput = document.getElementById("bookAuthor");
-const addButton = document.getElementById("addButton");
-const bookList = new BookList();
-
-addButton.addEventListener("click", () => {
-  bookList.addBook(bookTitleInput.value, bookAuthorInput.value);
-  bookList.renderBooks(document.getElementById("bookList"));
-  bookTitleInput.value = "";
-  bookAuthorInput.value = "";
+// eslint-disable-next-line no-new
+document.addEventListener('DOMContentLoaded', () => {
+  // eslint-disable-next-line no-new
+  new BookList();
 });
-
-// Render the existing books on page load
-bookList.renderBooks(document.getElementById("bookList"));
