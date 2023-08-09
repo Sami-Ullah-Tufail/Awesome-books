@@ -54,8 +54,10 @@ class BookList {
     });
   }
 }
-// eslint-disable-next-line no-new
-document.addEventListener('DOMContentLoaded', () => {
-  // eslint-disable-next-line no-new
-  new BookList();
-});
+
+function renderBooksOnLoad() {
+  const bookList = new BookList();
+  bookList.renderBooks(); // Call renderBooks method here
+}
+
+document.addEventListener('DOMContentLoaded', renderBooksOnLoad);
