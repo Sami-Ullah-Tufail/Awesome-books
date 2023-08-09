@@ -9,19 +9,16 @@ body {
   background-color: #f4f4f4;
 }
 
-/* Style for the main header */
 h1.main-header {
   font-size: 28px;
   margin-bottom: 20px;
 }
 
-/* Style for the book list header */
 h2.book-list-header {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-/* Style for the book list container */
 #bookListContainer {
   width: 80%;
   background-color: white;
@@ -31,7 +28,7 @@ h2.book-list-header {
   margin-bottom: 20px;
 }
 
-/* Style for the form */
+/*
 form {
   display: flex;
   flex-direction: column;
@@ -41,7 +38,7 @@ form {
 label {
   margin-top: 10px;
 }
-
+*/
 input[type="text"] {
   width: 100%;
   padding: 5px;
@@ -58,7 +55,6 @@ button {
   cursor: pointer;
 }
 
-/* Style for the book list */
 ul {
   list-style: none;
   padding: 0;
@@ -75,21 +71,21 @@ li {
 }
 
 li:nth-child(even) {
-  background-color: #f4f4f4; /* Gray for even */
-}
+  background-color: #f4f4f4;
 
-li:nth-child(odd) {
-  background-color: white; /* White for odd */
-}
+  li:nth-child(odd) {
+    background-color: white;
+  }
 
-button.remove-button {
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  padding: 3px 8px;
-  cursor: pointer;
-}
+  button.remove-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    cursor: pointer;
+  }
 
-button.remove-button:hover {
-  background-color: #c82333;
+  button.remove-button:hover {
+    background-color: #c82333;
+  }
 }
