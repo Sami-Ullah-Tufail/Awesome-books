@@ -1,12 +1,10 @@
 /* eslint-disable */
-/*
 class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
   }
 }
-*/
 class BookList {
   constructor() {
     this.books = JSON.parse(localStorage.getItem("books")) || [];
