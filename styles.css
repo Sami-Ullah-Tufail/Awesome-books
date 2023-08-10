@@ -1,14 +1,15 @@
-h1,
-h2,
-p {
+/* Typography and Text Alignment */
+h1, h2, p {
   font-family: cursive;
   text-align: center;
 }
 
+/* Wrapper */
 .wrapper {
   min-height: 300px;
 }
 
+/* Main Section (Add Book Form) */
 .main {
   display: none;
   flex-direction: column;
@@ -23,23 +24,27 @@ p {
   align-items: center;
 }
 
-.book-row {
+/* Book List (Shelf) */
+.book {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  padding-left: 2%;
-  padding-right: 2%;
+  align-items: center;
+  padding: 10px; /* Increase padding for row size */
+  margin: 10px auto; /* Center horizontally and increase margin for spacing */
+  border: 1px solid #2d2d2d;
+  background-color: rgb(230, 230, 230);
+  width: 85%; /* Use 85% width for responsiveness */
 }
 
-.removeButton {
+.remove-button {
   font-family: 'Poppins', cursive;
   border: 1px solid #2d2d3d;
   box-shadow: 3px 5px;
-  margin: 1%;
   background-color: white;
   cursor: pointer;
 }
 
+/* Buttons */
 #addButton {
   font-family: 'Poppins', cursive;
   background-color: white;
@@ -47,13 +52,7 @@ p {
   box-shadow: 3px 5px;
 }
 
-#bookShelf {
-  border: 1px solid #2d2d2d;
-  margin: 5%;
-  max-height: 270px;
-  overflow: scroll;
-}
-
+/* Navigation Bar */
 .nav-bar {
   margin: 5%;
   margin-bottom: 1%;
@@ -89,6 +88,7 @@ li {
   cursor: pointer;
 }
 
+/* Footer */
 footer {
   display: flex;
   flex-direction: row;
@@ -99,6 +99,7 @@ footer {
   border: 1px solid #2d2d2d;
 }
 
+/* Sections Display */
 #listSection {
   display: none;
 }
@@ -113,6 +114,7 @@ footer {
   background-color: rgb(230, 230, 230);
 }
 
+/* Time Display */
 #time {
   text-align: end;
   margin-right: 5%;
