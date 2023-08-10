@@ -101,23 +101,40 @@ footer {
   border: 1px solid #2d2d2d;
 }
 
-/* Sections Display */
-#listSection {
-  display: none;
-}
-
 .contact {
-  display: none;
   flex-direction: column;
   align-items: center;
+}
+
+/* Center list items and decrease gap */
+.contact ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0; /* Remove default left padding */
 }
 
 .book-row:nth-child(even) {
   background-color: rgb(230, 230, 230);
 }
 
-/* Time Display */
-#time {
-  text-align: end;
-  margin-right: 5%;
+/* Center list items and decrease gap */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0; /* Remove default left padding */
+}
+
+.contact-item {
+  text-align: center; /* Remove default list item bullets */
+  margin: -20px 20px; /* Adjust top and bottom margins */
+}
+
+.contact-item p {
+  margin: 0; /* Remove any default margins on the <p> elements */
+}
+
+.contact-item a {
+  display: inline-block;
 }
