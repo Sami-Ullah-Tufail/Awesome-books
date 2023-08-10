@@ -103,7 +103,7 @@ footer {
   display: none;
 }
 
-/* .contact {
+.contact {
   display: none;
   flex-direction: column;
   align-items: center;
@@ -116,4 +116,4 @@ footer {
 #time {
   text-align: end;
   margin-right: 5%;
-} */
+}
