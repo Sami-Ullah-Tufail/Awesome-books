@@ -1,90 +1,140 @@
-/* Center align the entire page */
-body {
-  display: flex;
+/* Typography and Text Alignment */
+h1,
+h2,
+p {
+  font-family: cursive;
+  text-align: center;
+}
+
+/* Wrapper */
+.wrapper {
+  min-height: 300px;
+}
+
+/* Main Section (Add Book Form) */
+.main {
+  display: none;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin: 0;
-  background-color: #f4f4f4;
-}
-
-h1.main-header {
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-h2.book-list-header {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-#bookListContainer {
-  width: 80%;
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-label {
-  margin-top: 10px;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 5px;
-  margin-top: 5px;
-}
-
-button {
-  margin-left: 78%;
-  margin-top: 10px;
-  padding: 5px 15px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  border-bottom: 1px solid #ccc;
-  padding: 10px;
-  width: 100%;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-li:nth-child(even) {
-  background-color: #f4f4f4;
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  li:nth-child(odd) {
-    background-color: white;
-  }
+/* Book List (Shelf) */
+.book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Increase padding for row size */
+  margin: 10px auto; /* Center horizontally and increase margin for spacing */
+  border: 1px solid #2d2d2d;
+  background-color: rgb(230, 230, 230);
+  width: 85%; /* Use 85% width for responsiveness */
+}
 
-  button.remove-button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 3px 8px;
-    cursor: pointer;
-  }
+.remove-button {
+  font-family: 'Poppins', cursive;
+  border: 1px solid #2d2d3d;
+  box-shadow: 3px 5px;
+  background-color: white;
+  cursor: pointer;
+}
 
-  button.remove-button:hover {
-    background-color: #c82333;
-  }
+/* Buttons */
+#addButton {
+  font-family: 'Poppins', cursive;
+  background-color: white;
+  border: 1px solid #2d2d2d;
+  box-shadow: 3px 5px;
+}
+
+/* Navigation Bar */
+.nav-bar {
+  margin: 5%;
+  margin-bottom: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 1px solid #2d2d2d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.nav-item {
+  font-family: 'Poppins', cursive;
+  padding: 5%;
+  min-width: max-content;
+  cursor: pointer;
+  text-align: center;
+}
+
+li {
+  text-align: center;
+  padding-top: 5%;
+}
+
+#logo {
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 1px solid #2d2d2d;
+}
+
+.contact {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Center list items and decrease gap */
+.contact ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0; /* Remove default left padding */
+}
+
+.book-row:nth-child(even) {
+  background-color: rgb(230, 230, 230);
+}
+
+/* Center list items and decrease gap */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0; /* Remove default left padding */
+}
+
+.contact-item {
+  text-align: center; /* Remove default list item bullets */
+  margin: -20px 20px; /* Adjust top and bottom margins */
+}
+
+.contact-item p {
+  margin: 0; /* Remove any default margins on the <p> elements */
+}
+
+.contact-item a {
+  display: inline-block;
 }
